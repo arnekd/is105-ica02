@@ -67,5 +67,6 @@ func GetASCIIStringLiteral() string {
 // Gjelder oppgave 1c
 func GreetingASCII() string {
 	s := []byte{'"', 'H', 'e', 'l', 'l', 'o', ' ', ':', '-', ')', '"'}
+	fmt.Printf("\"Hello :-)\" til heksadesimal verdi: % X\n", s)
 	return string(s[:])
 }

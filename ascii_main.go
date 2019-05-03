@@ -11,7 +11,7 @@ func main() {
 
 	strLiteral := ascii.GetASCIIStringLiteral()
 
-	//fmt.Println(strLiteral)
+	ascii.GreetingASCII()
 	ascii.IterateOverASCIIStringLiteral(strLiteral)
 
 }
