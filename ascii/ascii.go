@@ -40,22 +40,12 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 			fmt.Printf("%X %b\n", a, a)
 		}
 	}
-
-	/*for i := 0; i < len(stringLiteral); i++ {
-		// using %q here as several of the first characters are unprintable
-		// including null, start of header etc
-		fmt.Printf("%X %c %b\n", i, i, i)
-	}*/
-
 }
 
 // This function returns the constant ascii as a string
 func GetASCIIStringLiteral() string {
 	return ascii
 }
-
-// Unix-like operating systems are known to use it as erase control character,
-// i.e. to delete the previous character in the line mode.
 
 // Funksjonen skal generere en utskrift fra en sekvens av bytes,
 // dvs. av typen []bytes (det betyr at du må finne den heksadesimale
