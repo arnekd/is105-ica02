@@ -10,7 +10,8 @@ func main() {
 	iso.IterateOverASCIIExtendedStringLiteral(iso.GetExtendedASCIIStringLiteral())
 
 	fmt.Println("Salut, ça va °-) Κοστίζει ​€50​")
-
-	fmt.Printf("%s\n", "\xa5")
+	iso.GreetingExtendedASCII()
+	fmt.Println("Fra hexadesimal verdi:")
+	iso.PrintFromHex()
 
 }

@@ -15,4 +15,7 @@ func main() {
 	fmt.Printf("lang02:\n% X\n", text2)
 	fmt.Printf("lang03:\n% X\n", text3)
 
+	fmt.Printf("Original: %s\n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+	fmt.Printf("UTF-8: %s\n", "\xc2\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+
 }

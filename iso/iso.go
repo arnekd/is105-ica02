@@ -53,7 +53,22 @@ func GetExtendedASCIIStringLiteral() string {
 // utvidet ASCII
 // Kode for Oppgave 2c
 func GreetingExtendedASCII() string {
-	s := []byte("Salut, ça va °-) Ça coute €50")
-	//s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
+
+	s := []byte("\"Salut, ça va °-) Ça coute €50\"")
+	s2 := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
+
+	fmt.Printf("\"Salut, ça va °-) Κοστίζει ​€50​\" til heksadesimal verdi: % X\n", s2)
+
 	return string(s[:])
+}
+
+// Skriver ut "Salut, ça va °-) Κοστίζει €50" fra den heksadesimale verdien
+func PrintFromHex() {
+
+	h := []byte("\x22\x53\x61\x6C\x75\x74\x2C\x20\x63\xCC\xA7" +
+		"\x61\x20\x76\x61\x20\xC2\xB0\x2D\x29\x20\xCE\x9A\xCE\xBF" +
+		"\xCF\x83\xCF\x84\xCE\xB9\xCC\x81\xCE\xB6\xCE\xB5\xCE\xB9\x20\xE2\x82\xAC\x35\x30\x22")
+
+	fmt.Printf("%s\n", h)
+
 }

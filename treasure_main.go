@@ -11,7 +11,4 @@ func main() {
 
 	treasure.PrintTreasureUTF8(text)
 
-	//1/2: c2 bd
-	fmt.Printf("%s\n", "\xc2\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
-
 }
