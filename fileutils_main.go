@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/arnekd/ICA02/fileutils"
+	//"strings"
 )
 
 func main() {
@@ -17,12 +18,29 @@ func main() {
 
 	fmt.Println()
 
-	//text1first16 := "\xEF\xDA\xA3\xD2\xD3\xCB\x0A\xEF\xDA\xA3\xD2\xD3\xCB\xC1\x0A\xEF"
-	//fmt.Printf("%c\n", byte[]("\xEF"))
-	fmt.Printf("%s", "\xc3\xaf\xc3\x9a")
+	// Lagrer de 16 første bytes i hver fil
+	const text1First16 = "\xEF\xDA\xA3\xD2\xD3\xCB\x0A\xEF\xDA\xA3\xD2\xD3\xCB\xC1\x0A\xEF"
+	const text2First16 = "\xFE\xFD\x73\x6B\x61\x72\x0A\xFE\xFD\x73\x6B\x61\x72\x61\x6E\x61"
+	const text3First16 = "\xF8\x79\x65\x73\x70\x65\x73\x69\x61\x6C\x69\x73\x74\x65\x6E\x0A"
 
-	//1110 1111 --> 11000011 10101111 --> C3 AF
-	//1101 1010 --> 11000011 10011010 --> C3 9A
+	fmt.Println("De første 16 bytes\ni filen lang01.wl:")
+
+	// Skriver ut informasjon om de 16 første bytes i lang01.wl
+	for a := range text1First16 {
+		fmt.Printf("%c %U\n", text1First16[a], text1First16[a])
+	}
+
+	fmt.Println("\nDe første 16 bytes\ni filen lang02.wl:")
+
+	for b := range text2First16 {
+		fmt.Printf("%c %U\n", text2First16[b], text2First16[b])
+	}
+
+	fmt.Println("\nDe første 16 bytes\ni filen lang03.wl:")
+
+	for c := range text3First16 {
+		fmt.Printf("%c %U\n", text3First16[c], text3First16[c])
+	}
 
 	fmt.Println()
 
